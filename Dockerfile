@@ -5,8 +5,6 @@ ENV OPENAI_API_KEY=$OPENAI_API_KEY
 
 WORKDIR /app
 
-EXPOSE 4000
-
 RUN sed -i '1i\#!\/usr\/bin\/env python' metagpt/startup.py
 RUN chmod +x metagpt/startup.py
 
