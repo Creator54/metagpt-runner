@@ -5,6 +5,7 @@ Metagpt-runner is a simple wrapper/runner for [MetaGPT](https://github.com/geeka
 ## Dependencies
 
 - **Docker**
+- **OPENAI API ACCESS**: make the API key available in the environment via `OPENAI_API_KEY` variable.
 
 ## Usage
 
