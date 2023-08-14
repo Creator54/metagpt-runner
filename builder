@@ -7,7 +7,9 @@ if [ -z "$(echo $OPENAI_API_KEY)" ]; then
 	exit 1
 fi
 
-docker build --build-arg OPENAI_API_KEY=$(echo $OPENAI_API_KEY) . -t metagpt:custom
+SCRIPT_DIR="$(dirname $(realpath "$0"))"
+
+docker build --build-arg OPENAI_API_KEY="$(echo $OPENAI_API_KEY)" "$SCRIPT_DIR" -t metagpt:custom
 
 if [ $# -eq 0 ]; then
 	echo
