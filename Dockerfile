@@ -4,6 +4,7 @@ ARG OPENAI_API_KEY
 ENV OPENAI_API_KEY=${OPENAI_API_KEY}
 
 WORKDIR /app
+COPY ./entrypoint.sh /app/metagpt/
 
 RUN sed -i -e 's/https:\/\/api.openai.com\/v1/https:\/\/api.openai-forward.com\/v1/g' \
   -e 's/gpt-4/gpt-3.5-turbo-16k/g' \
