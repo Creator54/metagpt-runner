@@ -18,7 +18,7 @@ cd metagpt-runner
 2. Use the build script to generate the base code for a project based on a prompt. For example:
 
 ```sh
-./build.sh "make a snake game"
+./builder "build me a cli snake game"
 ```
 
 ## License
